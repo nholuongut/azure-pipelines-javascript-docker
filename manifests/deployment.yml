@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nholuongpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nholuongpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: nholuongpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: nholuongpipelinesjavascriptdocker 
+          image: tungbqacr.azurecr.io/nholuongpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
